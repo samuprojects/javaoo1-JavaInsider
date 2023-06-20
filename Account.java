@@ -1,3 +1,5 @@
+
+@SuppressWarnings("ALL")
 public class Account {
 
     String accountNumber;
@@ -12,7 +14,10 @@ public class Account {
         return false;
     }
 
-        @SuppressWarnings("SameParameterValue")
+    boolean deposit(String amount){
+       return deposit(Double.parseDouble(amount));
+    }
+
         boolean withdraw(double amount) {
         if (amount > 0 ) {
             balance -= amount;
@@ -21,7 +26,6 @@ public class Account {
         return false;
         }
 
-        @SuppressWarnings("SameParameterValue")
         void transfer(double amount, Account targetAccount) {
             withdraw(amount);
             targetAccount.deposit(amount);
