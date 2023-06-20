@@ -4,7 +4,7 @@ public class App {
 
         Account a1 = new Account();
         a1.accountNumber = "1234-5";
-        a1.accountOwner = "Jose";
+        a1.accountOwner = "José";
         a1.balance = 100.0;
 
         Account a2 = new Account();

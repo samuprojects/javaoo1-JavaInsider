@@ -4,11 +4,24 @@ public class Account {
     String accountOwner;
     double balance;
 
-    void deposit(double amount) {
-        balance += amount;
+    boolean deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            return true;
+        }
+        return false;
     }
 
-    void printBalance() {
-        System.out.println("Balance: R$ " + balance);
+        @SuppressWarnings("SameParameterValue")
+        boolean withdraw(double amount) {
+        if (amount > 0 ) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+        }
+
+        void printBalance() {
+            System.out.println("Balance: R$ " + balance);
+        }
     }
-}
