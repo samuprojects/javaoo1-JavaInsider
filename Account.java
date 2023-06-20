@@ -21,6 +21,13 @@ public class Account {
         return false;
         }
 
+        @SuppressWarnings("SameParameterValue")
+        void transfer(double amount, Account targetAccount) {
+            withdraw(amount);
+            targetAccount.deposit(amount);
+
+        }
+
         void printBalance() {
             System.out.println("Balance: R$ " + balance);
         }
