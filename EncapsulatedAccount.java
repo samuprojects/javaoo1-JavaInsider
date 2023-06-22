@@ -2,13 +2,9 @@
 @SuppressWarnings("ALL")
 public class EncapsulatedAccount {
 
-    private String accountNumber;
-    private String accountOwner;
+    final private String accountNumber;
+    final private String accountOwner;
     private double balance;
-
-    // Construtor padrão do Java
-    public EncapsulatedAccount(){
-    }
 
     public EncapsulatedAccount(String accountNumber, String accountOwner, double balance) {
         this.accountNumber = accountNumber;
@@ -71,9 +67,4 @@ public class EncapsulatedAccount {
         return accountOwner;
     }
 
-    public void setAccountOwner(String accountOwner) { // permite alteração condicional
-        if(!accountOwner.isBlank()) {
-            this.accountOwner = accountOwner;
-        } // atalho intelliJ ALT + INSERT
-    }
 }
