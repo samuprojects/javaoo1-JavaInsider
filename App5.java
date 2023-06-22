@@ -6,5 +6,10 @@ public class App5 {
         a.deposit(1000);
         a.withdraw(200);
         a.printBalance();
+
+        System.out.println(a.getAccountNumber());
+
+        a.setAccountOwner("Pedro");
+        System.out.println(a.getAccountOwner());
     }
 }

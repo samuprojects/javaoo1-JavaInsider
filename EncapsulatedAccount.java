@@ -14,12 +14,12 @@ public class EncapsulatedAccount {
         return false;
     }
 
-    boolean deposit(String amount){
+    boolean deposit(String amount) {
         return deposit(Double.parseDouble(amount));
     }
 
     boolean withdraw(double amount) {
-        if (amount > 0 ) {
+        if (amount > 0) {
             balance -= amount;
             return true;
         }
@@ -34,5 +34,23 @@ public class EncapsulatedAccount {
 
     void printBalance() {
         System.out.println("Balance: R$ " + balance);
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getAccountOwner() {
+        return accountOwner;
+    }
+
+    public void setAccountOwner(String accountOwner) { // permite alteração condicional
+        if(!accountOwner.isBlank()) {
+            this.accountOwner = accountOwner;
+        } // atalho intelliJ ALT + INSERT
     }
 }
