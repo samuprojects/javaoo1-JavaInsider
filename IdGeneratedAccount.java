@@ -6,10 +6,10 @@ public class IdGeneratedAccount {
     private final String accountOwner;
     private double balance;
 
-    private static int currentId = 1; // com o static a contagem do ID pertence à classe e não mais à instância
+    private static int currentId = 1;
 
     public IdGeneratedAccount(String accountOwner) {
-        this.accountNumber = "000" + currentId++; // cada novo cliente deve receber um novo ID sequencial se estiver static
+        this.accountNumber = "000" + currentId++;
         this.accountOwner = accountOwner;
         this.balance = 0.0;
     }
@@ -43,12 +43,15 @@ public class IdGeneratedAccount {
         return accountNumber;
     }
 
-    public double getBalance() {
-        return balance;
-    }
-
     public String getAccountOwner() {
         return accountOwner;
     }
 
+    public double getBalance() {
+        return balance;
+    }
+
+    public static int getCurrentId() {
+        return currentId;
+    }
 }
