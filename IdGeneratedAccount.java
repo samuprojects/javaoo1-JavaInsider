@@ -1,6 +1,10 @@
 
 @SuppressWarnings("ALL")
 public class IdGeneratedAccount {
+    // pode ter a visibilidade public pois como é static final o seu valor não é alterado.
+    // em alguns cenários pode ser interessante ter uma classe só para definir as constantes
+    // centralizando o que seriam as configurações de uma aplicação num lugar só.
+    public static final int INITIAL_VALUE = 10;
 
     private final String accountNumber;
     private final String accountOwner;
@@ -8,9 +12,8 @@ public class IdGeneratedAccount {
 
     private static int currentId;
 
-    // Vantagem do static block é a garantia de que será executado e apenas uma vez,
-    // antes de qualquer construtor e criação de objeto no Java.
-    static { // É uma forma de inicialização de atributos estáticos dentro de uma classe
+
+    static {
         System.out.println("Inicialiando currentId");
         currentId = 1;
     }
