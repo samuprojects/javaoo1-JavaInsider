@@ -6,7 +6,14 @@ public class IdGeneratedAccount {
     private final String accountOwner;
     private double balance;
 
-    private static int currentId = 1;
+    private static int currentId;
+
+    // Vantagem do static block é a garantia de que será executado e apenas uma vez,
+    // antes de qualquer construtor e criação de objeto no Java.
+    static { // É uma forma de inicialização de atributos estáticos dentro de uma classe
+        System.out.println("Inicialiando currentId");
+        currentId = 1;
+    }
 
     public IdGeneratedAccount(String accountOwner) {
         this.accountNumber = "000" + currentId++;
