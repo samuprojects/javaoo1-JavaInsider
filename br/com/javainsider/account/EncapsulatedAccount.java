@@ -3,8 +3,8 @@ package br.com.javainsider.account;
 @SuppressWarnings("ALL")
 public class EncapsulatedAccount {
 
-    final private String accountNumber;
-    final private String accountOwner;
+    private final String accountNumber;
+    private final String accountOwner;
     private double balance;
 
     public EncapsulatedAccount(String accountNumber, String accountOwner, double balance) {
@@ -26,7 +26,7 @@ public class EncapsulatedAccount {
         this(accountNumber, null, balance);
     }
 
-    boolean deposit(double amount) {
+    public boolean deposit(double amount) {
         if (amount > 0) {
             balance += amount;
             return true;
@@ -34,11 +34,11 @@ public class EncapsulatedAccount {
         return false;
     }
 
-    boolean deposit(String amount) {
+    public boolean deposit(String amount) {
         return deposit(Double.parseDouble(amount));
     }
 
-    boolean withdraw(double amount) {
+    public boolean withdraw(double amount) {
         if (amount > 0) {
             balance -= amount;
             return true;
@@ -46,13 +46,13 @@ public class EncapsulatedAccount {
         return false;
     }
 
-    void transfer(double amount, Account targetAccount) {
+    public void transfer(double amount, Account targetAccount) {
         withdraw(amount);
         targetAccount.deposit(amount);
 
     }
 
-    void printBalance() {
+    public void printBalance() {
         System.out.println("Balance: R$ " + balance);
     }
 
