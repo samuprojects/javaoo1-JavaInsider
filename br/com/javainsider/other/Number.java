@@ -1,10 +1,12 @@
+package br.com.javainsider.other;
+
 @SuppressWarnings("ALL")
 public class Number {
 
     private static int instances; // para constabilizar quantas instancias forem cridadas
     private int number; // representa um número do enunciado
 
-    public Number(int number) { // construtor de Number que obriga informar um número na instanciação
+    public Number(int number) { // construtor de br.com.javainsider.other.Number que obriga informar um número na instanciação
         this.number = number;
         instances++; // ao invés de criar um método increments para contabilizar as instanciações
         // foi implementado direto dentro do construtor

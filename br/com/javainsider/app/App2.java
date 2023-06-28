@@ -1,3 +1,7 @@
+package br.com.javainsider.app;
+
+import br.com.javainsider.account.Account;
+
 public class App2 {
     public static void main(String[] args) {
 

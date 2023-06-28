@@ -1,3 +1,7 @@
+package br.com.javainsider.app;
+
+import br.com.javainsider.account.EncapsulatedAccount;
+
 @SuppressWarnings("ALL")
 public class App6 {
 

@@ -1,3 +1,7 @@
+package br.com.javainsider.other;
+
+import br.com.javainsider.account.Account;
+
 @SuppressWarnings("ALL")
 public class NullReference {
 

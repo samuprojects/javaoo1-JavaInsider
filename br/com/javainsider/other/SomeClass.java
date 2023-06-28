@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 @SuppressWarnings("ALL")
 public class SomeClass {
     // visibilidade pública (apenas uma por arquivo) também chamada de top level class,

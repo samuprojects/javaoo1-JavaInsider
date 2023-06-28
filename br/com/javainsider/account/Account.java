@@ -1,3 +1,4 @@
+package br.com.javainsider.account;
 
 @SuppressWarnings("ALL")
 public class Account {

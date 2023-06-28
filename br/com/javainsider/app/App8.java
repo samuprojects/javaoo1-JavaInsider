@@ -1,3 +1,5 @@
+package br.com.javainsider.app;
+
 @SuppressWarnings("ALL")
 public class App8 {
 

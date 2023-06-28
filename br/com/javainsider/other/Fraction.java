@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 public class Fraction {
 
     int n;

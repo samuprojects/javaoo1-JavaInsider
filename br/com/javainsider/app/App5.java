@@ -1,3 +1,7 @@
+package br.com.javainsider.app;
+
+import br.com.javainsider.account.EncapsulatedAccount;
+
 public class App5 {
 
     public static void main(String[] args) {

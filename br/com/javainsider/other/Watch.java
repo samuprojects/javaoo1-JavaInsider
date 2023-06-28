@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 @SuppressWarnings("ALL")
 public class Watch {
 
